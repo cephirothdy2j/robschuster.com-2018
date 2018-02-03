@@ -1,21 +1,35 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
+import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
+import logo from './logo.jpg';
+
+import Category from './Category';
+import Home from './Home';
+import FourZeroFour from './FourZeroFour';
+import Nav from './Nav';
+
+
+const App = () => {
+  return (
+    <Router>
+      <div id="outer-container">
+        <header className="rs-hd">
+          <Nav />
+          <Link to="/"><img className="logo" src={logo} alt="Rob Schuster" /></Link>
         </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <main id="page-wrap">
+          <Switch>
+            <Route path="/:category" component={Category} />
+            <Route path="/" component={Home} />
+            <Route component={FourZeroFour} />
+          </Switch>
+        </main>
+        <footer className="rs-ft">
+          &copy; {new Date().getFullYear()} Rob Schuster. All rights reserved.
+        </footer>
       </div>
-    );
-  }
-}
+    </Router>
+  );
+};
 
 export default App;

@@ -2,4 +2,134 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  background: #000;
+  color:#fff;
+}
+
+/* Position and sizing of burger button */
+.bm-burger-button {
+  position: absolute;
+  width: 36px;
+  height: 30px;
+  right: 36px;
+  top: 36px;
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: #373a47;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: #bdc3c7;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: #373a47;
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: #373a47;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  color: #b8b7ad;
+  padding: 0.8em;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+
+#page-wrap {
+  padding: 0 5px;
+}
+
+.rs-ft {
+  text-align: center; margin: 20px;
+}
+
+.logo {
+  height: 46px;
+  margin: 20px 0 15px 10px;
+}
+.bm-burger-button {
+  top: 32px;
+  right: 22px;
+  width: 24px;
+  height: 24px;
+}
+
+.bm-burger-bars {
+  background: #fff;
+}
+
+
+.thumb {
+  cursor: pointer;
+  padding: 5px;
+  box-sizing: border-box;
+  max-width: 50%;
+  opacity: 0;
+  transition: opacity 200ms ease;
+  -webkit-transition: opacity 200ms ease;
+  -ms-transition: opacity 200ms ease;
+  -moz-transition: opacity 200ms ease;
+}
+.thumb.loaded {
+  opacity: 1;
+}
+
+.nav-link {
+  text-decoration: none;
+  display: block;
+  margin: 0 0 10px;
+}
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+@media (min-width: 640px) {
+  .logo {
+    height: 60px;
+  }
+  .bm-burger-button {
+    width: 32px;
+    height: 32px;
+    top: 36px;
+  }
+  .thumb {
+    max-width: 33.3333%;
+  }
+}
+
+@media (min-width: 992px) {
+  .logo {
+    height: 70px;
+  }
+}
+
+@media (min-width: 1080px) {
+  .thumb {
+    max-width: 25%;
+  }
+}
+
+body .ril__toolbar {
+  left: auto;
+  background-color: rgba(0,0,0,0.2);
 }
