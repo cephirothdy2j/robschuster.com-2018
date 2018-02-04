@@ -13,9 +13,12 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "npm run thumbs && react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "thumbs": "node scripts/thumbs.js"
+  },
+  "devDependencies": {
+    "sharp": "^0.19.0"
   }
 }
